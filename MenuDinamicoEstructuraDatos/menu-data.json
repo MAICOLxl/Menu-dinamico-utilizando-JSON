@@ -1,0 +1,42 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "nombre": "Inicio",
+      "enlace": "/inicio",
+      "icono": "HOME"
+    },
+    {
+      "id": 2,
+      "nombre": "Sobre Nosotros",
+      "enlace": "/sobre-nosotros",
+      "icono": "INFO"
+    },
+    {
+      "id": 3,
+      "nombre": "Servicios",
+      "enlace": "#",
+      "icono": "SERV"
+    },
+    {
+      "id": 4,
+      "nombre": "Desarrollo Web",
+      "enlace": "/servicios/web",
+      "parentId": 3,
+      "icono": "WEB"
+    },
+    {
+      "id": 5,
+      "nombre": "Soporte",
+      "enlace": "/servicios/soporte",
+      "parentId": 3,
+      "icono": "HELP"
+    },
+    {
+      "id": 6,
+      "nombre": "Contacto",
+      "enlace": "/contacto",
+      "icono": "MAIL"
+    }
+  ]
+}

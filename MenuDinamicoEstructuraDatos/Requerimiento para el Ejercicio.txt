@@ -1,0 +1,63 @@
+Requerimiento para el Ejercicio
+Crear menú dinámico, utilizando una estructura de datos (JSON, XML.....)
+Requerimientos funcionales:
+1.	Estructura de Datos:
+o	Utilizar un formato de estructura de datos para almacenar las opciones del menú. Puede ser un archivo JSON o XML.
+o	El formato debe permitir que el usuario agregue, elimine o modifique las opciones del menú sin tocar el código fuente.
+Ejemplo en JSON:
+{
+  "menu": [
+    {
+      "id": 1,
+      "nombre": "Inicio",
+      "enlace": "/inicio"
+    },
+    {
+      "id": 2,
+      "nombre": "Sobre Nosotros",
+      "enlace": "/sobre-nosotros"
+    },
+    {
+      "id": 3,
+      "nombre": "Servicios",
+      "enlace": "/servicios"
+    },
+    {
+      "id": 4,
+      "nombre": "Contacto",
+      "enlace": "/contacto"
+    }
+  ]
+}
+2.	Interfaz de Usuario:
+o	El menú debe generarse dinámicamente en la interfaz basada en los datos de la estructura (JSON/XML).
+o	Las opciones del menú deben mostrarse como botones, enlaces u otro componente adecuado.
+o	Incluir iconos o submenús si están presentes en la estructura de datos.
+3.	Agregación de Opciones:
+o	Proveer una interfaz o método para que el usuario pueda agregar nuevas opciones al menú sin modificar el código. Esto puede lograrse desde un formulario o al editar directamente la estructura de datos.
+4.	Actualización Dinámica:
+o	Cualquier modificación (agregar, eliminar o actualizar una opción) en la estructura de datos debe reflejarse en el menú de manera dinámica (sin necesidad de recargar toda la página).
+5.	Validaciones:
+o	Cada opción debe tener un identificador único para evitar duplicados.
+o	Verificar que los enlaces proporcionados sean válidos.
+6.	Compatibilidad:
+o	El menú debe ser responsive, ajustándose a diferentes tamaños de pantalla (dispositivos móviles, tabletas, escritorio).
+7.	Eventos:
+o	Asignar acciones o eventos a las opciones del menú, como redirigir a un enlace, abrir un submenú o ejecutar una función.
+Requerimientos no funcionales:
+1.	Eficiencia:
+o	El menú debe cargarse de manera eficiente, minimizando los tiempos de respuesta al usuario.
+2.	Mantenimiento:
+o	El código debe ser modular y fácil de mantener, permitiendo futuras expansiones o cambios en la estructura de datos.
+3.	Seguridad:
+o	Si el menú permite agregar opciones mediante un formulario, validar y sanitizar las entradas del usuario para prevenir inyecciones de código.
+4.	Tecnologías:
+o	Se puede utilizar cualquier lenguaje de programación compatible con la estructura de datos seleccionada (JSON, XML).
+o	Para la parte del frontend, frameworks como React, Angular o Vue.js son recomendables, ya que permiten manejar de manera eficiente el rendering dinámico de los componentes.
+Ejemplo de un flujo de trabajo:
+1.	El archivo JSON/XML que contiene las opciones del menú se carga al iniciar la aplicación.
+2.	El menú se renderiza en la interfaz utilizando las opciones obtenidas de la estructura de datos.
+3.	El usuario puede agregar o modificar las opciones desde una interfaz (p. ej., un formulario).
+4.	El sistema actualiza dinámicamente el menú sin recargar toda la página.
+5.	El menú responde adecuadamente en diferentes dispositivos.
+Este enfoque permitirá flexibilidad en la gestión de las opciones del menú y facilitará su actualización sin intervención directa en el código fuente.
