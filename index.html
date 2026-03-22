@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu dinamico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Menu dinamico con JSON</h1>
+    <p id="data-source">Cargando datos...</p>
+
+    <section class="box">
+      <h2>Menu</h2>
+      <ul id="menu-list"></ul>
+    </section>
+
+    <section class="box">
+      <h2>Formulario</h2>
+      <form id="menu-form">
+        <input type="hidden" id="edit-id">
+
+        <label for="item-id">ID</label>
+        <input id="item-id" type="number" min="1" required>
+
+        <label for="item-name">Nombre</label>
+        <input id="item-name" type="text" required>
+
+        <label for="item-link">Enlace</label>
+        <input id="item-link" type="text" required placeholder="/ruta o https://ejemplo.com">
+
+        <label for="item-icon">Icono</label>
+        <input id="item-icon" type="text" placeholder="HOME">
+
+        <label for="item-parent">ID padre</label>
+        <input id="item-parent" type="number" min="1" placeholder="Opcional">
+
+        <div class="buttons">
+          <button type="submit">Guardar</button>
+          <button type="button" id="cancel-edit">Cancelar</button>
+          <button type="button" id="reset-storage">Restablecer</button>
+        </div>
+      </form>
+
+      <p id="form-message"></p>
+    </section>
+
+    <section class="box">
+      <h2>JSON actual</h2>
+      <div class="buttons">
+        <input id="file-input" type="file" accept=".json,application/json">
+        <button id="export-json" type="button">Exportar JSON</button>
+      </div>
+      <pre id="json-preview"></pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
